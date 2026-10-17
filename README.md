@@ -40,10 +40,6 @@ Outputs:
 Copy them into `C:\Program Files\Common Files\VST3` and
 `C:\Program Files\Common Files\CLAP` respectively.
 
-Upgrading from the AudioPatcher builds: delete the old `AudioPatcher*.vst3`
-and `.clap` files first. Tare keeps the same plugin IDs, so existing projects
-load it in their place, but two files with the same ID will confuse hosts.
-
 Options: `-DTARE_BUILD_CLAP=OFF`, `-DTARE_BUILD_TESTS=OFF`.
 
 ## Calibrating

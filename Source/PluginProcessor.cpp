@@ -85,10 +85,8 @@ TareProcessor::TareProcessor()
     : AudioProcessor (BusesProperties()
                           .withInput ("Synth Return", juce::AudioChannelSet::stereo(), true)
                           .withOutput ("Output", juce::AudioChannelSet::stereo(), true)),
-      // State tag predates the rename to Tare. Keep it, or saved projects
-      // lose their calibration.
       middleCOctave (hostMiddleCOctave()),
-      parameters (*this, nullptr, "AudioPatcher", createParameterLayout (*this))
+      parameters (*this, nullptr, "Tare", createParameterLayout (*this))
 {
     startTimerHz (15);
 }

@@ -32,7 +32,7 @@ function(tare_add_plugin target)
     cmake_parse_arguments(ARG "" "PRODUCT_NAME;PLUGIN_CODE;IS_SYNTH;CLAP_ID" "VST3_CATEGORIES;CLAP_FEATURES" ${ARGN})
 
     juce_add_plugin(${target}
-        COMPANY_NAME             "kay"
+        COMPANY_NAME             "mothfuzz"
         PRODUCT_NAME             "${ARG_PRODUCT_NAME}"
         PLUGIN_MANUFACTURER_CODE Kmfz
         PLUGIN_CODE              ${ARG_PLUGIN_CODE}
@@ -74,22 +74,22 @@ function(tare_add_plugin target)
     endif()
 endfunction()
 
-# PLUGIN_CODE and CLAP_ID predate the rename to Tare. Hosts identify plugins by
-# them, so changing either breaks existing projects.
+# Hosts identify plugins by PLUGIN_CODE (VST3) and CLAP_ID, so once people have
+# projects using Tare, changing either breaks them.
 tare_add_plugin(Tare
     PRODUCT_NAME    "Tare"
-    PLUGIN_CODE     Apch
+    PLUGIN_CODE     Tare
     IS_SYNTH        TRUE
     VST3_CATEGORIES Instrument External
-    CLAP_ID         "com.kay.audiopatcher"
+    CLAP_ID         "com.mothfuzz.tare"
     CLAP_FEATURES   instrument utility)
 
 tare_add_plugin(TareFX
     PRODUCT_NAME    "Tare FX"
-    PLUGIN_CODE     Apfx
+    PLUGIN_CODE     TrFx
     IS_SYNTH        FALSE
     VST3_CATEGORIES Fx External
-    CLAP_ID         "com.kay.audiopatcher.fx"
+    CLAP_ID         "com.mothfuzz.tare.fx"
     CLAP_FEATURES   audio-effect utility)
 
 if(TARE_BUILD_TESTS)
