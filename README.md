@@ -5,6 +5,8 @@ measures the MIDI out → synth → audio in round trip and reports it to the ho
 as plugin latency, so the host's delay compensation lines the synth up with
 everything else.
 
+<img width="488" height="483" alt="image" src="https://github.com/user-attachments/assets/a3518c76-4ea3-4b42-9512-e7be1add8958" />
+
 It is built in two variants from the same code:
 
 | Plugin | Type | Synth return arrives on | Use in |
